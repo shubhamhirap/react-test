@@ -2,13 +2,17 @@ import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import { Dialog, Grid, Typography } from "@mui/material";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
+import { useNavigate } from "react-router-dom";
 
 export default function SuccessDialog(props) {
   const { close, open } = props;
 
+  const navigate = useNavigate();
+
   useEffect(() => {
     setTimeout(() => {
       close();
+      navigate("/createads");
     }, 600);
 
     return () => {
@@ -44,9 +48,9 @@ export default function SuccessDialog(props) {
 }
 
 SuccessDialog.propTypes = {
-  onClose: PropTypes.func.isRequired,
-  open: PropTypes.bool.isRequired,
-  selectedValue: PropTypes.string.isRequired,
+  onClose: PropTypes.func,
+  open: PropTypes.bool,
+  selectedValue: PropTypes.string,
 };
 
 // export default function SimpleDialogDemo() {

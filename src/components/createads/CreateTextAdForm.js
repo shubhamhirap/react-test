@@ -28,7 +28,6 @@ const CreateTextAdForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(textAdsForm);
     setTextAdsForm({
       heading1: "",
       heading2: "",
@@ -43,7 +42,7 @@ const CreateTextAdForm = () => {
     textAdsForm.description === "" &&
     textAdsForm.businessName === "" &&
     textAdsForm.buttonLabel === "" &&
-    textAdsForm.websiteURL === ""
+    textAdsForm.websiteUrl === ""
       ? setOpenDialog(false)
       : setOpenDialog(true);
   };

@@ -31,7 +31,6 @@ const CreateMediaAdForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(mediaAdsForm);
     setMediaAdsForm({
       heading1: "",
       heading2: "",
@@ -57,8 +56,7 @@ const CreateMediaAdForm = () => {
     mediaAdsForm.websiteURL === ""
       ? setOpenDialog(false)
       : setOpenDialog(true);
-
-    console.log(openDialog);
+ 
   };
 
   const handleBack = (e) => {

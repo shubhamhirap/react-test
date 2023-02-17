@@ -138,11 +138,6 @@ EnhancedTableHead.propTypes = {
   rowCount: PropTypes.number.isRequired,
 };
 
-// const convertToNumber = (item) => {
-//   const stringNumber = Number(item.split(" ")[1]);
-//   console.log(typeof stringNumber);
-// };
-
 export default function CustomTable() {
   const [order, setOrder] = React.useState("asc");
   const [orderBy, setOrderBy] = React.useState("campaigns");

@@ -11,7 +11,6 @@ export default function DonutChart({ chartData, matrix }) {
   );
 
   useEffect(() => {
-    console.log(chartData);
     matrixData(matrix);
   }, [matrix]);
 
